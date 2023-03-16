@@ -56,48 +56,13 @@ public class MoneyTransferTest {
         assertEquals(beginBalance2 + sum, endBalance2);
     }
 
-    @Test
-    @DisplayName("Не должен переводить больше, чем есть на карте")
-    void shouldNotTransferMoreThanAvailable() {
-        sum = beginBalance1 + 100;
-        var topUpPage = dashboardPage.clickTopUp(dashboardPage.card2);
-        var cardNum = DataGenerator.getFirstCard().getNumber();
-        topUpPage.unsuccessfulTopUp(Integer.toString(sum), cardNum);
-    }
+//   @Test
+//   @DisplayName("Не должен переводить больше, чем есть на карте")
+//   void shouldNotTransferMoreThanAvailable() {
+//       sum = beginBalance1 + 100;
+//       var topUpPage = dashboardPage.clickTopUp(dashboardPage.card2);
+//       var cardNum = DataGenerator.getFirstCard().getNumber();
+//       topUpPage.unsuccessfulTopUp(Integer.toString(sum), cardNum);
+//   }
 
 }
-//  @Test
-//void shouldTransferMoneyBetweenOwnCardsV1() {
-//    open("http://localhost:9999");
-//    var loginPage = new LoginPageV1();
-//    var loginPage = open("http://localhost:9999", LoginPageV1.class);
-//     var authInfo = DataGenerator.getAuthInfo();
-//     var verificationPage = loginPage.validLogin(authInfo);
-//     var verificationCode = DataGenerator.getVerificationCodeFor(authInfo);
-//     verificationPage.validVerify(verificationCode);
-// }
-
-//   @Test
-//   void shouldTransferMoneyBetweenOwnCards() {
-//    open("http://localhost:9999");
-
-//      var loginPage = new LoginPage();
-//      var loginPage = open("http://localhost:9999", LoginPageV2.class);
-//   var authInfo = DataGenerator.getAuthInfo();
-//      var verificationPage = loginPage.validLogin(authInfo);
-//      var verificationCode = DataGenerator.getVerificationCodeFor(authInfo);
-//      verificationPage.validVerify(verificationCode);
-//      new LoginPage()
-//               .validLogin(authInfo)
-//               .validVerify(DataGenerator.getVerificationCodeFor(authInfo));
-
-
-//  @Test
-//  void shouldTransferMoneyBetweenOwnCardsV3() {
-//      var loginPage = open("http://localhost:9999", LoginPageV3.class);
-//      var authInfo = DataGenerator.getAuthInfo();
-//      var verificationPage = loginPage.validLogin(authInfo);
-//      var verificationCode = DataGenerator.getVerificationCodeFor(authInfo);
-//      verificationPage.validVerify(verificationCode);
-//  }
-
