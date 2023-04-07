@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="54e6d526-5918-44b4-9d08-5740d52d2b7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/DashboardPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/TopUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/TopUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/TopUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/TransferPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/VerificationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/VerificationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/MoneyTransferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/MoneyTransferTest.java" afterDir="false" />
     </list>
@@ -35,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2N2nfA72JkoWOZqKhiXUCyVHau8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,7 +47,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sergei/IdeaProjects/BDD2.4.1/artifacts&quot;
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sergei/IdeaProjects/BDD2.4.1/artifacts&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -52,7 +59,7 @@
       <recent name="C:\Users\Sergei\IdeaProjects\BDD2.4.1" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MoneyTransferTest">
+  <component name="RunManager" selected="Gradle.MoneyTransferTest.shouldTransferMoneyFromSecondToFirstCard">
     <configuration name="MoneyTransferTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,10 +177,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MoneyTransferTest.shouldTransferMoneyFromSecondToFirstCard" />
         <item itemvalue="Gradle.MoneyTransferTest" />
         <item itemvalue="Gradle.MoneyTransferTest.shouldNotTransferMoreThanAvailable" />
         <item itemvalue="Gradle.MoneyTransferTest.shouldTransferMoneyFromFirstToSecondCard" />
-        <item itemvalue="Gradle.MoneyTransferTest.shouldTransferMoneyFromSecondToFirstCard" />
         <item itemvalue="Gradle.MoneyTransferTest.shouldTransferMoneyBetweenOwnCards" />
       </list>
     </recent_temporary>
