@@ -2,7 +2,6 @@ package ru.netology.test;
 
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataGenerator;
 import ru.netology.page.DashboardPage;
@@ -25,13 +24,12 @@ public class MoneyTransferTest {
         dashboardPage = verificationPage.validVerify(verificationCode);
     }
 
-     @Test
-    @DisplayName("Перевод денег сo второй карты на первую")
+    @Test
     void shouldTransferMoneyFromSecondToFirstCard() {
         var firstCardNumber = getFirstCardNumber();
         var secondCardNumber = getSecondCardNumber();
-        var firstCardBalance = dashboardPage.getCardBalance(firstCardNumber);
         var secondCardBalance = dashboardPage.getCardBalance(secondCardNumber);
+        var firstCardBalance = dashboardPage.getCardBalance(firstCardNumber);
         var amount = generateValidAmount(secondCardBalance);
         var expectedBalanceSecondCard = secondCardBalance - amount;
         var expectedBalanceFirstCard = firstCardBalance + amount;
@@ -45,7 +43,6 @@ public class MoneyTransferTest {
 
 
     @Test
-    @DisplayName("Перевод суммы превышающий остаток на карте списания")
     void shouldGetErrorMessageIfAmountMoreBalance() {
         var firstCardNumber = getFirstCardNumber();
         var secondCardNumber = getSecondCardNumber();

@@ -1,5 +1,6 @@
 package ru.netology.page;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataGenerator;
@@ -14,7 +15,7 @@ public class DashboardPage {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = "р.";
     private final SelenideElement heading = $("[data-test-id = dashboard]");
-    private final ElementsCollection cards = $$(".list__item div");
+    private ElementsCollection cards = $$(".list__item div");
 
 
     public DashboardPage() {
@@ -22,12 +23,12 @@ public class DashboardPage {
     }
 
     public int getCardBalance(DataGenerator.CardNumber cardNumber) {
-        var text= cards.findBy(text(cardNumber.getCardNumber().substring(15))).getText();
+        var text = cards.findBy(Condition.text(cardNumber.getCardNumber().substring(15))).getText();
         return extractBalance(text);
     }
 
     public TransferPage selectCardNumberTransfer(DataGenerator.CardNumber cardNumber) {
-        cards.findBy(text(cardNumber.getCardNumber().substring(15))).$("button").click();
+        cards.findBy(Condition.text(cardNumber.getCardNumber().substring(15))).$("button").click();
         return new TransferPage();
     }
 

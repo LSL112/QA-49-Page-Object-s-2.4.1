@@ -2,20 +2,16 @@ package ru.netology.page;
 
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.FindBy;
 import ru.netology.data.DataGenerator;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class LoginPage {
-    @FindBy(css = "[data-test-id = login] input")
-    private static SelenideElement loginField;
+    private SelenideElement loginField = $("[data-test-id=login] input");
+    private SelenideElement passwordField = $("[data-test-id=password] input");
+    private SelenideElement loginButton = $("[data-test-id=action-login]");
 
-    @FindBy(css = "[data-test-id = password] input")
-    private static SelenideElement passwordField;
-
-    @FindBy(css = "[data-test-id = action-login]")
-    private static SelenideElement loginButton ;
 
     public VerificationPage validLogin(DataGenerator.AuthInfo info) {
         loginField.setValue(info.getLogin());
